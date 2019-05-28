@@ -1,0 +1,49 @@
+﻿<Window x:Class="WłasnyProjekt.CreateNewFood"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WłasnyProjekt"
+        mc:Ignorable="d"
+        Title="Stwórz nowy posiłek" Height="299.421" Width="433.961"
+        x:Name="CreateNewFoodWindow2"
+        ResizeMode="NoResize">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label FontSize="10" FontWeight="bold" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom">Wartość odżywczą oraz makroskładniki należy podać dla 100g posiłku</Label>
+        
+        <StackPanel Margin="20">
+            <Label Margin="2" >Nazwa posiłku:</Label>
+            <Label Margin="2" >Wartość odżywcza:</Label>
+            <Label Margin="2" >Ilośc białka:</Label>
+            <Label Margin="2" >Ilość węglowodanów:</Label>
+            <Label Margin="2" >Ilość tłuszczy:</Label>
+            <Label Margin="2" >Kategoria:</Label>
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="20">
+
+            <TextBox Margin="2" x:Name="addFoodName" Width="150" HorizontalAlignment="Right" Height="26"></TextBox>
+            <TextBox Margin="2" x:Name="addKcal" Width="150" HorizontalAlignment="Right" Height="26"></TextBox>
+            <TextBox Margin="2" x:Name="addProtein" Width="150" HorizontalAlignment="Right" Height="26"></TextBox>
+            <TextBox Margin="2" x:Name="addCarbs" Width="150" HorizontalAlignment="Right" Height="26"></TextBox>
+            <TextBox Margin="2" x:Name="addFats" Width="150" HorizontalAlignment="Right" Height="26"></TextBox>
+            <ComboBox Margin="2" x:Name="chooseCategory" Width="150" HorizontalAlignment="Right" Height="26"></ComboBox>
+        </StackPanel>
+
+        <Grid Grid.ColumnSpan="2" Grid.Row="1" Margin="20,0,20,20">
+        <Button x:Name="addNewFoodAddButton"  Height="20" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left" Click="addNewFoodAddButton_Click">Dodaj</Button>
+        <Button Grid.Row="1" Height="20" Width="150"  VerticalAlignment="Top" HorizontalAlignment="Right" Grid.Column="1">Anuluj</Button>
+        </Grid>
+    </Grid>
+</Window>
